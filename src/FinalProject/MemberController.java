@@ -81,26 +81,7 @@ public class MemberController extends Controller{
             System.out.println("검색할 회원의 이름을 입력하세요: ");
             String name = sc.nextLine();
 
-            Member member = null;
-            for (Member m : mm.members) {
-                if (m.getUserName().equals(name)) {
-                    member = m;
-                    break;
-                }
-            }
 
-            if (member == null) {
-                System.out.println("회원이 존재하지 않습니다.");
-                return;
-            }
-
-            System.out.println("회원 정보");
-            System.out.println("이름: " + member.getUserName());
-            System.out.println("주소: " + member.getUserAddress());
-            System.out.println("연락처: " + member.getPhoneNumber());
-            System.out.println("등록일: " + member.getRegistrationDate());
-            System.out.println("생년월일: " + member.getBirthDate());
-            System.out.println("--------------------");
         } else {
             System.out.println("잘못된 입력입니다.");
         }
